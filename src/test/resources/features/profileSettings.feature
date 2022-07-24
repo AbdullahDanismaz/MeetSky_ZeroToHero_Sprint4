@@ -1,0 +1,1 @@
+Feature: User can view and update details via Profile Settings
