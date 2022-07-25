@@ -24,6 +24,8 @@ public class ProfileSettingsPage {
     @FindBy(id = "localeexample-time")
     public WebElement localTim;
 
+    //---------------------
+
 
     
     
