@@ -22,7 +22,7 @@ public class ProfileSettingsPage {
     public WebElement DropdownByPhoneNumber;
 
     @FindBy(id = "localeexample-time")
-    public WebElement localTime;
+    public WebElement localTim;
 
 
     
