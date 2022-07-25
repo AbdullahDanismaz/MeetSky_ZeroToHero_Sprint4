@@ -15,13 +15,14 @@ Feature: As a user, I should be able to create/delete any note and see the detai
     And Click on the login button on the login page
     Then Verify that user can login files page successfully
 
-  @wip
+
   Scenario: AC1 User can create a new note
     Then user click the pencil button on the top menu
     And user click the New note button on the left menu
     And user write notes inside note page
     And verify that user created the note and its title matches with the first word
 
+  @wip
   Scenario: AC2 User can add any note to the favorites
     When user click the pencil button on the top menu
     And user click one note three dot menu link
@@ -31,6 +32,25 @@ Feature: As a user, I should be able to create/delete any note and see the detai
     Then verify that favorite note inside the favorites
 
 
+  Scenario: AC3- User can see the number of letters and words that the note includes under the note title when clicked on the details of the note
+    When user click the pencil button on the top menu
+    And user click the first favorite note
+    And user click right three dot menu
+    And user click the details button
+    Then user verify the informations showed under the header note
 
 
+  Scenario: AC4- User can create a new category by passing a new category name from inside the notes details
+    When user click the pencil button on the top menu
+    And user click right three dot menu
+    And user click the details button
+    And user enter the new category name inside the input under the categories
+    And user click the enter arrow
+    And user click the categories button on the left menu
+    And user verify the new category name displayed on the left menu
 
+
+  Scenario: AC5- User can delete any note
+    When user click the pencil button on the top menu
+    And user click one note three dot menu link
+    And user click th Delete button
