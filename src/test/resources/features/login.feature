@@ -1,4 +1,4 @@
-eature:1-User can login with valid credentials
+Feature:1-User can login with valid credentials
 
 
   Scenario:1-User can login with valid credentials

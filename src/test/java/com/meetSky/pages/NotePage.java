@@ -16,18 +16,21 @@ public class NotePage {
     @FindBy(xpath = "//button[@id='notes_new_note']") //NewNoteButton
     public WebElement newNoteButton;
 
-    @FindBy(xpath = "//pre") //NoteArea
+    @FindBy(xpath = "//div[@class=\'CodeMirror cm-s-easymde CodeMirror-wrap\']") //NoteArea
     public WebElement noteArea;
 
     @FindBy(xpath ="//div[@class='CodeMirror-code']") //NoteTitle
     public WebElement lastNotTitle;
 
-    /*
+
     //------------------------------------------------
-    @FindBy(xpath = "")// leftNoteMenu
+    @FindBy(xpath = "(//button[@class='icon action-item__menutoggle action-item__menutoggle--default-icon'])[3]")// leftNoteMenu
+    public WebElement leftNoteMenu;
 
-    @FindBy(xpath = "") // addToFavorites
+    @FindBy(xpath = "(//span[@class='action-button__text'])[2]") // addToFavorites
+    public WebElement addToFavorites;
 
+ /*
     //-------------------------------------------------
     @FindBy(xpath = "") // headMainMenuFilesButton
 
