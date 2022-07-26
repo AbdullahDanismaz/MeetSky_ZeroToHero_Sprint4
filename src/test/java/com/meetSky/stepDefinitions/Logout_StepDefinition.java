@@ -34,14 +34,15 @@ public class Logout_StepDefinition {
     }
 
     @Then("Verify that user can NOT go to home page again")
-    public void verifyThatUserCanNOTGoToHomePageAgain()  {
+    public void verifyThatUserCanNOTGoToHomePageAgain() {
 
         try {
             //assertFalse method will pass the test if the boolean value returned is: false
             Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
             Assert.assertFalse(page.filesIcon.isDisplayed());
-        }catch (NoSuchElementException n){
+        } catch (NoSuchElementException n) {
             Assert.assertTrue(true);
         }
     }
+
 }
