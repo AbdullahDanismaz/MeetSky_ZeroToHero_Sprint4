@@ -22,6 +22,7 @@ public class BasePage {
 
     @FindBy (xpath = "//a[@href='/index.php/apps/files/']")
     public WebElement filesIcon;
+
     @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
     public WebElement wrongPasswordMsg;
 
@@ -41,6 +42,16 @@ public class BasePage {
 
     @FindBy(xpath = "//input[@id='reset-password-submit']")
     public WebElement resetPasswordButton;
+
+    @FindBy(className = ("app-icon"))
+    public WebElement calendarIcon;
+
+//    @FindBy( xpath=("icon action-item__menutoggle icon-view-module"))
+//    public WebElement calendarMenu;
+
+    //@FindBy(className = (""))
+
+
 
 
 }
