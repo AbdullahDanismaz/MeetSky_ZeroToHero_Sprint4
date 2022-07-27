@@ -15,7 +15,7 @@ Feature: As a user, I should be able to create/delete any note and see the detai
     And Click on the login button on the login page
     Then Verify that user can login files page successfully
 
-
+  @wip
   Scenario: AC1 User can create a new note
     Then user click the pencil button on the top menu
     And user click the New note button on the left menu
@@ -28,7 +28,7 @@ Feature: As a user, I should be able to create/delete any note and see the detai
     And user click one note three dot menu link
     And user click to Add to favorites inside the opened menu
     And user click Files button on the head menu
-    And user click to Favorites on the left menu
+    And user click the pencil button on the top menu
     Then verify that favorite note inside the favorites
 
 
@@ -54,4 +54,4 @@ Feature: As a user, I should be able to create/delete any note and see the detai
     When user click the pencil button on the top menu
     And user click one note three dot menu link
     And user click th Delete button
-    And
+

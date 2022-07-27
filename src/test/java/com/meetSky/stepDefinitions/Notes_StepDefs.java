@@ -1,5 +1,6 @@
 package com.meetSky.stepDefinitions;
 
+import com.meetSky.pages.BasePage;
 import com.meetSky.pages.NotePage;
 import com.meetSky.utilities.BrowserUtils;
 import com.meetSky.utilities.Driver;
@@ -14,6 +15,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Notes_StepDefs {
 
+    BasePage basePage = new BasePage();
     NotePage notePage = new NotePage();
 
     Actions actions = new Actions(Driver.getDriver());
@@ -44,7 +46,8 @@ public class Notes_StepDefs {
         BrowserUtils.waitFor(3);
         String actualText = (Driver.getDriver().findElement(By.xpath("(//span[@class='app-navigation-entry__title'])[4]"))).getAttribute("title");
         System.out.println("actualText = " + actualText);
-        Assert.assertEquals( expectedText,actualText);
+        Assert.assertEquals(expectedText, actualText);
+
 
     }
 
@@ -53,7 +56,7 @@ public class Notes_StepDefs {
     @When("user click one note three dot menu link")
     public void user_click_one_note_three_dot_menu_link() {
 
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//div[@class='app-navigation-entry__utils'])[4]"))).click().perform();
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//div[@class='app-navigation-entry__utils'])[3]"))).click().perform();
 
     }
 
@@ -64,7 +67,7 @@ public class Notes_StepDefs {
 
     @When("user click Files button on the head menu")
     public void user_click_files_button_on_the_head_menu() {
-        notePage.addToFavorites.click();
+        basePage.filesIcon.click();
     }
 
     @When("user click to Favorites on the left menu")
@@ -85,12 +88,13 @@ public class Notes_StepDefs {
 
     @When("user click the first favorite note")
     public void user_click_the_first_favorite_note() {
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//a[@class='app-navigation-entry-link'])[4]"))).click().perform();
 
     }
 
     @When("user click right three dot menu")
     public void user_click_right_three_dot_menu() {
-
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//button[@class='icon action-item__menutoggle action-item__menutoggle--default-icon'])[8]"))).click().perform();
     }
 
     @When("user click the details button")
