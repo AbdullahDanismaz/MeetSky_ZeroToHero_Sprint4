@@ -65,7 +65,7 @@ public class FolderView_StepDefinition {
 
     @Then("User should see the total values of all files in the first line .")
     public void user_should_see_the_total_values_of_all_files_in_the_first_line() {
-//iiiii
+
     }
 
 
