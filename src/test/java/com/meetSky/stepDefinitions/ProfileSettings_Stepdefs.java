@@ -26,11 +26,11 @@ ProfileSettingsPage page = new ProfileSettingsPage();
     @Then("Verify {string} is visible")
     public void verify_is_visible(String string) {
         BrowserUtils.sleep(3);
-
         String actualName = page.FullNameInput.getText();
         Assert.assertEquals(actualName, string);
 
     }
+
 
     @Then("Verify EMAIL is visible")
     public void verifyEMAILIsVisible() {
