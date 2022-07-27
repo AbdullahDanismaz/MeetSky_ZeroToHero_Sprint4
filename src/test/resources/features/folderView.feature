@@ -38,8 +38,8 @@ Feature: As a user, I should be able to change folder view order by using Name/S
 
   Scenario: User can select all the files at once and see the total values of all files in the
   first line when clicked on the “select all” checkbox at the left top corner of the list
-    When    Click on the “select all” checkbox at the left top corner of the list.
-    Then    User should see the total values of all files in the first line .
+    When  Click on the “select all” checkbox at the left top corner of the list.
+    Then  User should see the total values of all files in the first line .
 
 
 
