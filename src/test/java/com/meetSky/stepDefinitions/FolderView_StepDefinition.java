@@ -4,8 +4,7 @@ import com.meetSky.pages.FolderViewPage;
 import com.meetSky.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
-
+import org.junit.Assert;
 
 
 public class FolderView_StepDefinition {
@@ -21,9 +20,9 @@ public class FolderView_StepDefinition {
     }
 
 
-
     @When("Click on the Size button.")
     public void click_on_the_size_button() {
+        folderViewPage.sizeButton.click();
 
     }
 
@@ -36,8 +35,9 @@ public class FolderView_StepDefinition {
 
     @When("Click on the Modified button.")
     public void click_on_the_modified_button() {
-
+        folderViewPage.modifiedButton.click();
     }
+
 
     @Then("User should see order by Modified")
     public void user_should_see_order_by_modified() {
@@ -47,13 +47,14 @@ public class FolderView_StepDefinition {
 
     @When("Click the toggle-view button at the right corner of all files tab screen.")
     public void click_the_toggle_view_button_at_the_right_corner_of_all_files_tab_screen() {
+        folderViewPage.toggleView.click();
     }
 
 
     @Then("User should see the  toggle-view .")
     public void user_should_see_the_toggle_view() {
+       Assert.assertTrue(folderViewPage.folderView.isDisplayed());
     }
-
 
 
     @When("Click on the “select all” checkbox at the left top corner of the list.")
@@ -64,13 +65,8 @@ public class FolderView_StepDefinition {
 
     @Then("User should see the total values of all files in the first line .")
     public void user_should_see_the_total_values_of_all_files_in_the_first_line() {
-
+// hello
     }
-
-
-
-
-
 
 
 }
