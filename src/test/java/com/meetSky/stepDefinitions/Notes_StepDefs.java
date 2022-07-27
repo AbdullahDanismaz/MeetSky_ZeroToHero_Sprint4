@@ -75,7 +75,7 @@ public class Notes_StepDefs {
 
     @Then("verify that favorite note inside the favorites")
     public void verify_that_favorite_note_inside_the_favorites() {
-        String lastNoteHead = Driver.getDriver().findElement(By.xpath("(//span[@class='app-navigation-entry__title'])[5]")).getText();
+        String lastNoteHead = Driver.getDriver().findElement(By.xpath("(//span[@class='app-navigation-entry__title'])[4]")).getText();
         System.out.println("lastNoteHead = " + lastNoteHead);
 
 
