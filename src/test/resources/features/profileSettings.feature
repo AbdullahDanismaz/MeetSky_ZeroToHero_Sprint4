@@ -8,13 +8,12 @@ And Click on the login button on the login page
 Then Verify that user can login files page successfully
 
 @MESK-386
-  Scenario: User Can see their username
+  Scenario: User Can see their Full Name
   Given Click on Profile Settings
   And Click on Settings
-  Then Verify "zak" is visible
+  Then Verify "<zak>" is visible
 
 
-  @MESK-387
-  Given Click on Profile Settings
-  And Click on Profile Settings
-  Then Verify EMAIL is visible
+
+
+

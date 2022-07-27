@@ -15,8 +15,8 @@ public class ProfileSettingsPage {
     @FindBy(xpath = "//a[@href='/index.php/settings/user']")
     public WebElement Settings;
 
-    @FindBy(id = "displayname")
-    public WebElement FullNamePlaceHolder;
+    @FindBy(xpath = "//*[@value='zak']")
+     public WebElement FullNameInput;
 
     @FindBy(css = "#phoneform .icon-password span")
     public WebElement DropdownByPhoneNumber;

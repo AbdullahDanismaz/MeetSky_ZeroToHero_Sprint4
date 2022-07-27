@@ -2,9 +2,11 @@ package com.meetSky.stepDefinitions;
 
 import com.meetSky.pages.ProfileSettingsPage;
 import com.meetSky.utilities.BrowserUtils;
+import com.meetSky.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 
 public class ProfileSettings_Stepdefs {
 ProfileSettingsPage page = new ProfileSettingsPage();
@@ -24,12 +26,11 @@ ProfileSettingsPage page = new ProfileSettingsPage();
     @Then("Verify {string} is visible")
     public void verify_is_visible(String string) {
         BrowserUtils.sleep(3);
-        String actualFullName = page.FullNamePlaceHolder.getText();
-        String expectedFullName = "zak";
-        Assert.assertEquals(actualFullName, expectedFullName);
+
+        String actualName = page.FullNameInput.getText();
+        Assert.assertEquals(actualName, string);
 
     }
-
 
     @Then("Verify EMAIL is visible")
     public void verifyEMAILIsVisible() {
