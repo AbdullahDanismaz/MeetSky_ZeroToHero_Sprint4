@@ -54,3 +54,4 @@ Feature: As a user, I should be able to create/delete any note and see the detai
     When user click the pencil button on the top menu
     And user click one note three dot menu link
     And user click th Delete button
+    And
