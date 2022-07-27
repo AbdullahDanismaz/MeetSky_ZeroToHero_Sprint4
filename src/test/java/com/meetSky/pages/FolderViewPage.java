@@ -24,14 +24,21 @@ public class FolderViewPage {
     public WebElement modifiedButton;
 
 
-    @FindBy(xpath="//*[@id='view-toggle']")
-    public WebElement toggleView;
+    @FindBy(xpath="//label[@class=\"button icon-toggle-filelist\"]")
+    public WebElement toggleFileList;
 
 
+    @FindBy(xpath="//label[@class=\"button icon-toggle-pictures\"]")
+    public WebElement togglePictures;
 
+// Here I have find the first folder from the firs row
     @FindBy(xpath= "//table[@class=\"list-container has-controls view-grid\"]/tbody//tr[1]")
     public WebElement folderView;
 
+
+
+    @FindBy(xpath="//label[@for=\"select_all_files\"]")
+    public WebElement selectAllCheckBox;
 
 
 
