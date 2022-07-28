@@ -13,6 +13,7 @@ import com.meetSky.pages.BasePage;
 public class Calendar_StepDefinition {
 
     BasePage page=new BasePage();
+    Actions actions = new Actions(Driver.getDriver());
 
     @Then("click on the calendar icon on the home page")
     public void click_on_the_calendar_icon_on_the_home_page() {
@@ -22,10 +23,8 @@ public class Calendar_StepDefinition {
 
     @And("click on the menu toggle icon on calendar page")
    public void clickOnTheMenuToggleIconOnCalendarPage() {
-//      page.calendarMenu.click();
-        Actions actions = new Actions(Driver.getDriver());
         BrowserUtils.waitFor(2);
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//pre)[2]"))).click().sendKeys(expectedText).perform();
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("//button[@class='icon action-item__menutoggle icon-view-module']"))).click().perform();
 
 
     }
