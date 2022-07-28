@@ -22,10 +22,24 @@ public class ProfileSettingsPage {
     public WebElement DropdownByPhoneNumber;
 
     @FindBy(id = "localeexample-time")
-    public WebElement localTim;
+    public WebElement localTime;
 
     @FindBy(id = "email")
     public WebElement emailInput;
+
+    @FindBy(id = "phone")
+    public WebElement phoneInput;
+
+    @FindBy(xpath = "//div[@tabindex='0'][.//strong[text()='Public']]//span[contains(@class, 'icon-federation-menu')]//span")
+    public WebElement privateMode;
+
+    @FindBy(xpath ="//*[@id='phoneform']/h3/div/div/ul/li[1]/a/p/strong")
+    public WebElement privateModeSelected;
+
+
+   
+
+
 
 
 
