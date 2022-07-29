@@ -12,20 +12,20 @@ public class uploadFile_StepDefinition {
 UploadFile uploadFile = new UploadFile();
 
     @Given("Navigate and Click plus link icon")
-    public void navigate_and_click_link_icon() {
+    public void navigate_and_click_plus_link_icon() {
         uploadFile.plusButton.click();
 
     }
-    @When("Click {string} list option")
-    public void click_list_option(String string) {
+    @When("Click Upload file list option")
+    public void click_upload_file_list_option() {
 
     }
     @When("Select a test upload file")
     public void select_a_test_upload_file() {
 
     }
-    @Then("Click {string} button on pop up window")
-    public void click_button_on_pop_up_window(String string) {
+    @Then("Click Open button on pop up window")
+    public void click_Open_button_on_pop_up_window() {
 
     }
 }
