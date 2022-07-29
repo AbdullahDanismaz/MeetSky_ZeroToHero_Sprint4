@@ -11,6 +11,10 @@ public class uploadFile_StepDefinition {
 
 UploadFile uploadFile = new UploadFile();
 
+    @Given("Navigate and Click on the files folder")
+    public void navigateAndClickOnTheFilesFolder() {
+    }
+
     @Given("Navigate and Click plus link icon")
     public void navigate_and_click_plus_link_icon() {
         uploadFile.plusButton.click();
@@ -28,4 +32,6 @@ UploadFile uploadFile = new UploadFile();
     public void click_Open_button_on_pop_up_window() {
 
     }
+
+
 }
