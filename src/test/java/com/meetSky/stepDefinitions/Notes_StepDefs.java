@@ -20,6 +20,7 @@ public class Notes_StepDefs {
 
     Actions actions = new Actions(Driver.getDriver());
     String expectedText = "OZZZY";
+    String expectedCategory = "Ozerk";
 
     // AC1 -----------------------------------------------------------------------------------------
 
@@ -94,23 +95,28 @@ public class Notes_StepDefs {
 
     @When("user click right three dot menu")
     public void user_click_right_three_dot_menu() {
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//button[@class='icon action-item__menutoggle action-item__menutoggle--default-icon'])[8]"))).click().perform();
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//div[@class='trigger'])[4]"))).click().perform();
     }
 
     @When("user click the details button")
     public void user_click_the_details_button() {
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//span[@class='action-button__text'])[1]"))).click().perform();
 
     }
 
     @Then("user verify the informations showed under the header note")
     public void user_verify_the_informations_showed_under_the_header_note() {
-
+        
+        String actualDetailsText = Driver.getDriver().findElement(By.xpath("//p[@class='app-sidebar-header__subtitle']")).getText();
+        System.out.println("actualDetailsText = " + actualDetailsText);
     }
 
     // AC4 -----------------------------------------------------------------------------------------
 
     @When("user enter the new category name inside the input under the categories")
     public void user_enter_the_new_category_name_inside_the_input_under_the_categories() {
+
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath(" //input[@id='category']"))).click().sendKeys(expectedCategory).perform();
 
     }
 
@@ -121,11 +127,17 @@ public class Notes_StepDefs {
 
     @When("user click the categories button on the left menu")
     public void user_click_the_categories_button_on_the_left_menu() {
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("//span[@title='Categories']"))).click().perform();
+
 
     }
 
     @When("user verify the new category name displayed on the left menu")
     public void user_verify_the_new_category_name_displayed_on_the_left_menu() {
+
+        String actualCreatedCategory = Driver.getDriver().findElement(By.xpath("(//span[@class='app-navigation-entry__title'])[3]")).getAttribute("title");
+        System.out.println("actualCreatedCategory = " + actualCreatedCategory);
+        Assert.assertEquals(expectedCategory, actualCreatedCategory);
 
     }
 
@@ -133,6 +145,7 @@ public class Notes_StepDefs {
 
     @When("user click th Delete button")
     public void user_click_th_delete_button() {
+        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//span[@class='action-button__text'])[2]"))).click().perform();
 
     }
 }
