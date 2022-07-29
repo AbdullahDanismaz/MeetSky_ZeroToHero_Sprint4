@@ -136,7 +136,7 @@ public class Notes_StepDefs {
 
     @When("user verify the new category name displayed on the left menu")
     public void user_verify_the_new_category_name_displayed_on_the_left_menu() {
-
+        BrowserUtils.waitFor(2);
         String actualCreatedCategory = Driver.getDriver().findElement(By.xpath("(//span[@class='app-navigation-entry__title'])[3]")).getAttribute("title");
         System.out.println("actualCreatedCategory = " + actualCreatedCategory);
         Assert.assertEquals(expectedCategory, actualCreatedCategory);
