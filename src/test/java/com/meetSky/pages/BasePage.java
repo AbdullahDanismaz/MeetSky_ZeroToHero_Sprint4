@@ -22,6 +22,7 @@ public class BasePage {
 
     @FindBy (xpath = "//a[@href='/index.php/apps/files/']")
     public WebElement filesIcon;
+    
     @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
     public WebElement wrongPasswordMsg;
 
