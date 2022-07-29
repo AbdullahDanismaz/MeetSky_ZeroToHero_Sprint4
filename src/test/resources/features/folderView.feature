@@ -10,10 +10,13 @@ Feature: As a user, I should be able to change folder view order by using Name/S
 
 
 
+@wip
   Scenario:User can change folder view order by Name
-    When Click on the Name button.
-    Then User should see order by Name
-
+    When Click on the triangle next to "Name" button.
+    And if triangle is North possitioned
+    Then user should see asscending "Name" order
+    And if triangle is South possitioned
+    Then user should see descending "Name" order
 
 
   Scenario:User can change folder view order by Size

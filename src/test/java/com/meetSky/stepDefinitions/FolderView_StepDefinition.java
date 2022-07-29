@@ -10,10 +10,40 @@ import org.junit.Assert;
 public class FolderView_StepDefinition {
     FolderViewPage folderViewPage = new FolderViewPage();
 
-    @When("Click on the Name button.")
-    public void clickOnTheNameButton() {
-        folderViewPage.nameButton.click();
+
+    @When("Click on the triangle next to {string} button.")
+    public void click_on_the_triangle_next_to_button(String string) {
+
     }
+    @When("if triangle is North possitioned")
+    public void if_triangle_is_north_possitioned() {
+
+    }
+    @Then("user should see asscending {string} order")
+    public void user_should_see_asscending_order(String string) {
+
+    }
+    @Then("if triangle is South possitioned")
+    public void if_triangle_is_south_possitioned() {
+
+    }
+    @Then("user should see descending {string} order")
+    public void user_should_see_descending_order(String string) {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Then("User should see order by Name")
     public void userShouldSeeOrderByName() {

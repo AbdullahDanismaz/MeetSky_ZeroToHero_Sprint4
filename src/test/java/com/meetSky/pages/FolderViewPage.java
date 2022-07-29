@@ -13,7 +13,7 @@ public class FolderViewPage {
 
 
     @FindBy(xpath = "//*[@class='sort-indicator icon-triangle-s']")
-    public WebElement nameButton;
+    public WebElement tringleNameS;
 
 
     @FindBy(xpath="//span[.='Size']")
