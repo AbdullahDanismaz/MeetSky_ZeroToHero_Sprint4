@@ -16,20 +16,23 @@ public class NotePage {
     @FindBy(xpath = "//button[@id='notes_new_note']") //NewNoteButton
     public WebElement newNoteButton;
 
-    @FindBy(xpath = "//div[@class='ProseMirror']//p") //NoteArea
+    @FindBy(xpath = "(//pre)[2]") //NoteArea
     public WebElement noteArea;
 
-    @FindBy(xpath ="//div[@class='CodeMirror-code']") //NoteTitle
+    @FindBy(xpath ="(//span[@class='app-navigation-entry__title'])[4]") //NoteTitle
     public WebElement lastNotTitle;
 
 
     //------------------------------------------------
 
-    @FindBy(xpath = "(//div[@class='app-navigation-entry__utils'])[7]")// leftNoteMenu
+    @FindBy(xpath = "(//div[@class='app-navigation-entry__utils'])[3]")// leftNoteMenu
     public WebElement leftNoteMenu;
 
-    @FindBy(xpath = "(//span[@class='action-button__text'])[2]") // addToFavorites
+    @FindBy(xpath = "(//span[@class='action-button__text'])[3]") // addToFavorites
     public WebElement addToFavorites;
+
+    @FindBy(xpath = "(//span[@class='app-navigation-entry__title'])[4]") // favoritesLastWebElement
+    public WebElement favoritesLastWebElement;
 
 
     //-------------------------------------------------
@@ -40,10 +43,10 @@ public class NotePage {
 
     //-------------------------------------------------
 
-    @FindBy(xpath = "(//button[@class='icon action-item__menutoggle action-item__menutoggle--default-icon'])[7]") // rightNoteMenu
+    @FindBy(xpath = "(//div[@class='trigger'])[5]") // rightNoteMenu
     public WebElement rightNoteMenu;
 
-    @FindBy(xpath = "//span[text()='Preview']") // detailsButton
+    @FindBy(xpath = "(//button[@class='action-button focusable'])[2]") // detailsButton
     public WebElement detailsButton;
 
     @FindBy(xpath = "//p[@class='app-sidebar-header__subtitle']") // detailsArea
@@ -64,7 +67,8 @@ public class NotePage {
 
     //-------------------------------------------------
 
-//    @FindBy (xpath = "") // deleteNoteButton
+    @FindBy (xpath = "(//span[@class='action-button__text'])[3]") // deleteNoteButton
+    public WebElement deleteNoteButton;
 
     //------------------------------------------------
 

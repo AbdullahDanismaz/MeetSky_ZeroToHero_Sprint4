@@ -23,12 +23,10 @@ Feature: As a user, I should be able to create/delete any note and see the detai
     And verify that user created the note and its title matches with the first word
 
 
-  Scenario: AC2 User can add any note to the favorites
+  Scenario: AC2- User can add any note to the favorites
     When user click the pencil button on the top menu
     And user click one note three dot menu link
     And user click to Add to favorites inside the opened menu
-    And user click Files button on the head menu
-    And user click the pencil button on the top menu
     Then verify that favorite note inside the favorites
 
 

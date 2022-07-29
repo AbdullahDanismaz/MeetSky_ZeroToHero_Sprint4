@@ -39,13 +39,13 @@ public class Notes_StepDefs {
     @Then("user write notes inside note page")
     public void user_write_notes_inside_note_page() {
         BrowserUtils.waitFor(2);
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//pre)[2]"))).click().sendKeys(expectedText).perform();
+        actions.moveToElement(notePage.noteArea).click().sendKeys(expectedText).perform();
     }
 
     @Then("verify that user created the note and its title matches with the first word")
     public void verify_that_user_created_the_note_and_its_title_matches_with_the_first_word() {
         BrowserUtils.waitFor(3);
-        String actualText = (Driver.getDriver().findElement(By.xpath("(//span[@class='app-navigation-entry__title'])[4]"))).getAttribute("title");
+        String actualText = (notePage.lastNotTitle).getAttribute("title");
         System.out.println("actualText = " + actualText);
         Assert.assertEquals(expectedText, actualText);
 
@@ -57,13 +57,13 @@ public class Notes_StepDefs {
     @When("user click one note three dot menu link")
     public void user_click_one_note_three_dot_menu_link() {
 
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//div[@class='app-navigation-entry__utils'])[3]"))).click().perform();
+        actions.moveToElement(notePage.leftNoteMenu).click().perform();
 
     }
 
     @When("user click to Add to favorites inside the opened menu")
     public void user_click_to_add_to_favorites_inside_the_opened_menu() {
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//span[@class='action-button__text'])[2]"))).click().perform();
+        actions.moveToElement(notePage.addToFavorites).click().perform();
     }
 
     @When("user click Files button on the head menu")
@@ -79,9 +79,10 @@ public class Notes_StepDefs {
 
     @Then("verify that favorite note inside the favorites")
     public void verify_that_favorite_note_inside_the_favorites() {
-        String lastNoteHead = Driver.getDriver().findElement(By.xpath("(//span[@class='app-navigation-entry__title'])[4]")).getText();
-        System.out.println("lastNoteHead = " + lastNoteHead);
-
+        BrowserUtils.waitFor(3);
+        String lastNoteTextInTheFavoriteArea = notePage.favoritesLastWebElement.getAttribute("title");
+        System.out.println("lastNoteHeadInTheFavoriteArea = " + lastNoteTextInTheFavoriteArea);
+        Assert.assertEquals(expectedText, lastNoteTextInTheFavoriteArea);
 
     }
 
@@ -95,20 +96,21 @@ public class Notes_StepDefs {
 
     @When("user click right three dot menu")
     public void user_click_right_three_dot_menu() {
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//div[@class='trigger'])[4]"))).click().perform();
+        actions.moveToElement(notePage.rightNoteMenu).click().perform();
     }
 
     @When("user click the details button")
     public void user_click_the_details_button() {
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//span[@class='action-button__text'])[1]"))).click().perform();
-
+        BrowserUtils.waitFor(2);
+        actions.moveToElement(notePage.detailsButton).click().perform();
     }
 
     @Then("user verify the informations showed under the header note")
     public void user_verify_the_informations_showed_under_the_header_note() {
-        
-        String actualDetailsText = Driver.getDriver().findElement(By.xpath("//p[@class='app-sidebar-header__subtitle']")).getText();
+        String expectedText = "1 word, 5 characters";
+        String actualDetailsText = notePage.detailsArea.getText();
         System.out.println("actualDetailsText = " + actualDetailsText);
+        Assert.assertEquals(expectedText, actualDetailsText);
     }
 
     // AC4 -----------------------------------------------------------------------------------------
@@ -145,7 +147,7 @@ public class Notes_StepDefs {
 
     @When("user click th Delete button")
     public void user_click_th_delete_button() {
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//span[@class='action-button__text'])[2]"))).click().perform();
+        actions.moveToElement(notePage.deleteNoteButton).click().perform();
 
     }
 }
