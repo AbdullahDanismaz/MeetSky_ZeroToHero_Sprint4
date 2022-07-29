@@ -105,4 +105,9 @@ public class Login_StepDefinition {
         Assert.assertTrue(message.equalsIgnoreCase("Please fill in this field."));
         System.out.println("message = " + message);
     }
+
+    @When("Enter username into {string} inputbox")
+    public void enterUsernameIntoInputbox(String arg0) {
+
+    }
 }
