@@ -1,6 +1,8 @@
 package com.meetSky.pages;
 
 import com.meetSky.utilities.Driver;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -46,9 +48,17 @@ public class BasePage {
     @FindBy(xpath = "//span[.='Calendar']")
     public WebElement calendarIcon;
 
-    @FindBy(xpath = "//button[@class='icon action-item__menutoggle icon-view-module']")
+    @FindBy(xpath = "//span[@class='material-design-icon view-module-icon']")
     public WebElement calendarToggleMenu;
 
+    @FindBy(xpath = "//span[.='Day']")
+    public WebElement dayCalendarMenu;
+
+    @FindBy(xpath = "//span[.='Week']")
+    public WebElement weekCalendarMenu;
+
+    @FindBy(xpath = "//span[.='Month']")
+    public WebElement monthCalendarMenu;
 
 
 
