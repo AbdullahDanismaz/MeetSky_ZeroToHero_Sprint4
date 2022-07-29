@@ -28,7 +28,7 @@ ProfileSettingsPage page = new ProfileSettingsPage();
     }
     @Then("Verify {string} is visible")
     public void verify_is_visible(String string) {
-        BrowserUtils.sleep(3);
+        BrowserUtils.sleep(5);
         String actualName = page.FullNameInput.getAttribute("value");
         Assert.assertEquals(actualName, string);
 
