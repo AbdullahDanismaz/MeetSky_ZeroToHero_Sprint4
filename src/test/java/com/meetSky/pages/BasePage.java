@@ -45,5 +45,14 @@ public class BasePage {
     @FindBy(xpath = "//input[@id='reset-password-submit']")
     public WebElement resetPasswordButton;
 
+    @FindBy(xpath = "//span[.='Calendar']")
+    public WebElement calendarIcon;
+
+    @FindBy(xpath = "//button[@class='icon action-item__menutoggle icon-view-module']")
+    public WebElement calendarToggleMenu;
+
+
+
+
 
 }

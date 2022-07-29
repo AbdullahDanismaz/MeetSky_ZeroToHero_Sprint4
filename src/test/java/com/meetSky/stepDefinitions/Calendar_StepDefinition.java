@@ -24,9 +24,24 @@ public class Calendar_StepDefinition {
     @And("click on the menu toggle icon on calendar page")
    public void clickOnTheMenuToggleIconOnCalendarPage() {
         BrowserUtils.waitFor(2);
-        actions.moveToElement(Driver.getDriver().findElement(By.xpath("//button[@class='icon action-item__menutoggle icon-view-module']"))).click().perform();
-
+        page.calendarToggleMenu.click();
+        //actions.moveToElement(Driver.getDriver().findElement(By.xpath("//button[@class='icon action-item__menutoggle icon-view-module']"))).click().perform();
 
     }
 
+
+    @Then("User can click day button on calendar menu")
+    public void userCanClickDayButtonOnCalendarMenu() {
+        page.dayCalendarMenu.click();
+    }
+
+    @Then("User can click week button on calendar menu")
+    public void userCanClickWeekButtonOnCalendarMenu() {
+        page.weekCalendarMenu.click();
+    }
+
+    @Then("User can click month button on calendar menu")
+    public void userCanClickMonthButtonOnCalendarMenu() {
+        page.monthCalendarMenu.click();
+    }
 }
