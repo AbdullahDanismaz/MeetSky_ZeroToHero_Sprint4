@@ -12,8 +12,8 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 
 public class Login_StepDefinition {
-
     BasePage page=new BasePage();
+
     @Given("Navigate to login page")
     public void navigate_to_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("meetSky_url"));
@@ -104,5 +104,10 @@ public class Login_StepDefinition {
 
         Assert.assertTrue(message.equalsIgnoreCase("Please fill in this field."));
         System.out.println("message = " + message);
+    }
+
+    @When("Enter username into {string} inputbox")
+    public void enterUsernameIntoInputbox(String arg0) {
+
     }
 }

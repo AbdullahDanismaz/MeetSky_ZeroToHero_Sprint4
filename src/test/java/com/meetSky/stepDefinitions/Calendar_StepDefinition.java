@@ -44,4 +44,14 @@ public class Calendar_StepDefinition {
     public void userCanClickMonthButtonOnCalendarMenu() {
         page.monthCalendarMenu.click();
     }
+
+    @And("User can create a new event on calendar page")
+    public void userCanCreateANewEventOnCalendarPage(){
+        page.createNewEvent.click();
+    }
+
+    @Then("user can delete an event on calendar page")
+    public void userCanDeleteAnEventOnCalendarPage() {
+        page.deleteEventButton.click();
+    }
 }
