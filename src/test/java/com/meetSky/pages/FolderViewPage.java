@@ -19,11 +19,6 @@ public class FolderViewPage {
     public WebElement tringleNameN;
 
 
-
-
-
-
-
     @FindBy(xpath="//span[.='Size']")
      public WebElement sizeButton;
 

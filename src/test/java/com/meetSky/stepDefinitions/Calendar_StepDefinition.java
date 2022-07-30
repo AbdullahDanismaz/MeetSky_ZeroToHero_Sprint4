@@ -1,5 +1,6 @@
 package com.meetSky.stepDefinitions;
 
+import com.meetSky.pages.CalendarPage;
 import com.meetSky.utilities.BrowserUtils;
 import com.meetSky.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -12,7 +13,7 @@ import com.meetSky.pages.BasePage;
 
 public class Calendar_StepDefinition {
 
-    BasePage page=new BasePage();
+    CalendarPage page = new CalendarPage();
     Actions actions = new Actions(Driver.getDriver());
 
     @Then("click on the calendar icon on the home page")
@@ -23,7 +24,7 @@ public class Calendar_StepDefinition {
 
     @And("click on the menu toggle icon on calendar page")
    public void clickOnTheMenuToggleIconOnCalendarPage() {
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(5);
         page.calendarToggleMenu.click();
         //actions.moveToElement(Driver.getDriver().findElement(By.xpath("//button[@class='icon action-item__menutoggle icon-view-module']"))).click().perform();
 
@@ -37,21 +38,25 @@ public class Calendar_StepDefinition {
 
     @Then("User can click week button on calendar menu")
     public void userCanClickWeekButtonOnCalendarMenu() {
+        BrowserUtils.waitFor(5);
         page.weekCalendarMenu.click();
     }
 
     @Then("User can click month button on calendar menu")
     public void userCanClickMonthButtonOnCalendarMenu() {
+        BrowserUtils.waitFor(5);
         page.monthCalendarMenu.click();
     }
 
     @And("User can create a new event on calendar page")
     public void userCanCreateANewEventOnCalendarPage(){
+        BrowserUtils.waitFor(5);
         page.createNewEvent.click();
     }
 
     @Then("user can delete an event on calendar page")
     public void userCanDeleteAnEventOnCalendarPage() {
+        BrowserUtils.waitFor(5);
         page.deleteEventButton.click();
     }
 }

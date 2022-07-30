@@ -56,6 +56,7 @@ Feature: User can see Daily-Weekly-Monthly calendar view and create new event
 
   @MESK-407
 Scenario: user can delete an event on calendar page
+    Given Navigate to login page
     When Enter username into "Employee113" inputBox
     And Enter password into "Employee123" inputBox
     And Click on the login button on the login page
@@ -63,3 +64,4 @@ Scenario: user can delete an event on calendar page
     Then click on the calendar icon on the home page
     And User can create a new event on calendar page
   Then user can delete an event on calendar page
+
