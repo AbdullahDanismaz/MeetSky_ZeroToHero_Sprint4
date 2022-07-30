@@ -10,7 +10,6 @@ Feature: As a user, I should be able to change folder view order by using Name/S
     And Click on the login button on the login page
     Then Verify that user can login files page successfully
     And click on the folder files from top bar
-    #Then Verify user can see the plus sing in order to add data into folders
 
 
   @MESK-409
