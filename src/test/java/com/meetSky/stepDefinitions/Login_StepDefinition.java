@@ -110,4 +110,20 @@ public class Login_StepDefinition {
     public void enterUsernameIntoInputbox(String arg0) {
 
     }
+
+
+
+
+    @And("click on the folder files from top bar")
+    public void clickOnTheFolderFilesFromTopBar() {
+        page.filesFolder.click();
+    }
+
+/*
+    @Then("Verify user can see the plus sing in order to add data into folders")
+    public void verifyUserCanSeeThePlusSingInOrderToAddDataIntoFolders() {
+        Assert.assertTrue(page.addIcon.isDisplayed());
+    }
+
+ */
 }

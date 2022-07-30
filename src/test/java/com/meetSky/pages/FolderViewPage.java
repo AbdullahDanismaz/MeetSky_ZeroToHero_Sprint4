@@ -13,11 +13,13 @@ public class FolderViewPage {
 
 
     @FindBy(xpath = "//*[@class='sort-indicator icon-triangle-s']")
-    public WebElement tringleNameS;
+    public WebElement triangleNameS;
 
     @FindBy(xpath = "//*[@class='sort-indicator icon-triangle-n']")
-    public WebElement tringleNameN;
+    public WebElement triangleNameN;
 
+    @FindBy(xpath = "//table[@class=\"list-container has-controls\"]/tbody//tr")
+    public WebElement tableRows;
 
 
 
@@ -32,22 +34,28 @@ public class FolderViewPage {
     public WebElement modifiedButton;
 
 
-    @FindBy(xpath="//label[@class=\"button icon-toggle-filelist\"]")
-    public WebElement toggleFileList;
 
 
-    @FindBy(xpath="//label[@class=\"button icon-toggle-pictures\"]")
-    public WebElement togglePictures;
 
-// Here I have find the first folder from the firs row
-    @FindBy(xpath= "//table[@class=\"list-container has-controls view-grid\"]/tbody//tr[1]")
-    public WebElement folderView;
+
+
+
+    @FindBy(xpath="//*[@class=\"list-container has-controls\"]")
+    public WebElement toggleListView;
+
+
+    @FindBy(xpath="//*[@class=\"list-container has-controls view-grid\"]")
+    public WebElement togglePicturesView;
 
 
 
     @FindBy(xpath="//label[@for=\"select_all_files\"]")
     public WebElement selectAllCheckBox;
 
+
+    // Here I have find the first folder from the firs row
+    @FindBy(xpath= "//table[@class=\"list-container has-controls view-grid\"]/tbody//tr[1]")
+    public WebElement folderView;
 
 
 
