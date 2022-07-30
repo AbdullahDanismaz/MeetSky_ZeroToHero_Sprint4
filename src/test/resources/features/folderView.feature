@@ -1,3 +1,5 @@
+
+@MESK-377
 Feature: As a user, I should be able to change folder view order by using Name/Size/Modified buttons
 
 
@@ -11,7 +13,7 @@ Feature: As a user, I should be able to change folder view order by using Name/S
     #Then Verify user can see the plus sing in order to add data into folders
 
 
-
+  @MESK-409
   Scenario:User can change folder view order by Name
     When Click on the triangle next to "Name" button.
     And if triangle is North possitioned
@@ -19,7 +21,7 @@ Feature: As a user, I should be able to change folder view order by using Name/S
     And if triangle is South possitioned
     Then user should see descending "Name" order
 
-
+  @MESK-410
   Scenario:User can change folder view order by Size
     When Click on the triangle next to "Size" button.
     And if triangle is North possitioned
@@ -28,7 +30,7 @@ Feature: As a user, I should be able to change folder view order by using Name/S
     Then user should see descending "Size" order
 
 
-
+  @MESK-411
   Scenario:    User can change folder view order by Modified
     When Click on the triangle next to "Modified" button.
     And if triangle is North possitioned
@@ -39,7 +41,7 @@ Feature: As a user, I should be able to change folder view order by using Name/S
 
 
 
-  @wip
+  @MESK-412
   Scenario: User can change the folder view by clicking the
   toggle-view button at the right corner of all files tab screen
     When user clicks on list toggle-view on the right up
@@ -48,11 +50,11 @@ Feature: As a user, I should be able to change folder view order by using Name/S
     Then user should see the picture view
 
 
-
+  @MESK-413
   Scenario: User can select all the files at once and see the total values of all files in the
   first line when clicked on the “select all” checkbox at the left top corner of the list
     When  Click on the “select all” checkbox at the left top corner of the list.
     Then  User should see the total values of all files in the first line .
 
-#Hello
+
 
