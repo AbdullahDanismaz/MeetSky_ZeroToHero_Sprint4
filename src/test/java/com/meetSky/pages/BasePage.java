@@ -10,6 +10,15 @@ public class BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
+    @FindBy(xpath="//*[@filter=\"url(#invertMenuMain-files)\"]")
+    public WebElement filesFolder;
+
+    @FindBy(xpath="//*[@class=\"icon icon-add\"]")
+    public WebElement addIcon;
+
+
+
     @FindBy(xpath = "//input[@id='user']")
     public WebElement usernameInputBox;
 
