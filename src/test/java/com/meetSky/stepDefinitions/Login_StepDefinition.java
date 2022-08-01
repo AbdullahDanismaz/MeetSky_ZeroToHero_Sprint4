@@ -36,7 +36,7 @@ public class Login_StepDefinition {
 
     @Then("Verify that user can login files page successfully")
     public void verify_that_user_can_login_files_page_successfully() {
-        BrowserUtils.sleep(5);
+        BrowserUtils.sleep(3);
         Assert.assertTrue(page.filesIcon.isEnabled());
 
     }

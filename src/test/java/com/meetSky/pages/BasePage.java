@@ -26,7 +26,7 @@ public class BasePage {
     @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
     public WebElement wrongPasswordMsg;
 
-    @FindBy (xpath =" //img[@width='32']")
+    @FindBy (xpath ="//img[@width='32']")
     public WebElement profileIcon;
 
     @FindBy (xpath =  "//li[@data-id='logout']")
