@@ -21,11 +21,6 @@ public class FolderViewPage {
     @FindBy(xpath = "//table[@class=\"list-container has-controls\"]/tbody//tr")
     public WebElement tableRows;
 
-
-
-
-
-
     @FindBy(xpath="//span[.='Size']")
      public WebElement sizeButton;
 

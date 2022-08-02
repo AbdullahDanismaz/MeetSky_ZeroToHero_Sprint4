@@ -1,6 +1,8 @@
 package com.meetSky.pages;
 
 import com.meetSky.utilities.Driver;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -31,7 +33,7 @@ public class BasePage {
 
     @FindBy (xpath = "//a[@href='/index.php/apps/files/']")
     public WebElement filesIcon;
-    
+
     @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
     public WebElement wrongPasswordMsg;
 
@@ -51,6 +53,14 @@ public class BasePage {
 
     @FindBy(xpath = "//input[@id='reset-password-submit']")
     public WebElement resetPasswordButton;
+
+    @FindBy(xpath = "//span[.='Calendar']")
+    public WebElement calendarIcon;
+
+    @FindBy(xpath = "//button[@class='icon action-item__menutoggle icon-view-module']")
+    public WebElement calendarToggleMenu;
+
+
 
 
 
