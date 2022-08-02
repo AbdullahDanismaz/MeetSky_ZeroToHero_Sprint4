@@ -34,18 +34,18 @@ public class CalendarPage {
     @FindBy(xpath = "//button[@class='button primary new-event']")
     public WebElement createNewEvent;
 
-    @FindBy(xpath = "//div[@class='fc-event-title fc-sticky']")
-    public WebElement untitledEventMessage;
-
     @FindBy(xpath= "//button[@class='primary']")
     public WebElement saveButton;
 
-    @FindBy(xpath = "//div[@class='action-item app-sidebar-header__menu']")
+    @FindBy(xpath = "//div[@class='fc-daygrid-event-harness']")
+    public WebElement untitledEventMessage;
+
+    @FindBy(xpath = "//div[starts-with(@id, 'popover')]//span[@class='material-design-icon dots-horizontal-icon']")
     public WebElement dotsButton;
 
     @FindBy(xpath = "//span[.='Delete']")
     public WebElement deleteEventButton;
 
-
+    ////button[text()[normalize-space()='More']]
 
 }
