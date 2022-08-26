@@ -17,9 +17,7 @@ import org.junit.runner.RunWith;
         glue = "com/meetSky/stepDefinitions",
         dryRun = false,
 
-        tags = " @MESK-407",
-
-        tags = "@wip",
+        tags = " @MESK-420",
 
         publish = false
 )
