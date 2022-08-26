@@ -32,6 +32,7 @@ public class ContactGroupStepDefinition {
     }
     @Then("Verify that user can see the small window with Create a new group text")
     public void verify_that_user_can_see_the_small_window_with_create_a_new_group_text() {
+        BrowserUtils.sleep(3);
         Assert.assertTrue(contactGroupPage.newGroup.isDisplayed());
     }
     @Then("Enter a new group name")
